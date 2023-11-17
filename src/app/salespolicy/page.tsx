@@ -26,7 +26,7 @@ export default function App() {
         itsukikigoshi+githubio@gmail.com）までご連絡頂いた場合に限り，返金を受け付けます．
       </Typography>
       <Button href="/" variant="contained" startIcon={<CottageIcon />}>
-        Go Back to Home
+        Go Home
       </Button>
     </Box>
   );
