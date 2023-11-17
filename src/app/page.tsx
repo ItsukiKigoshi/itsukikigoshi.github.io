@@ -16,7 +16,7 @@ export default function App() {
       sx={{
         display: "grid",
         placeItems: "center", // Center the content horizontally and vertically
-        minHeight: "100vh", // Set a minimum height to fill the entire viewport
+        minHeight: "80vh", // Set a minimum height to fill the entire viewport
       }}
     >
       <Box
