@@ -4,11 +4,8 @@ import TwitterIcon from "@mui/icons-material/Twitter";
 import InstagramIcon from "@mui/icons-material/Instagram";
 import GitHubIcon from "@mui/icons-material/GitHub";
 import LinkedInIcon from "@mui/icons-material/LinkedIn";
-import Typography from "@mui/material/Typography";
-import Box from "@mui/material/Box";
-import Stack from "@mui/material/Stack";
-import Avatar from "@mui/material/Avatar";
-import Button from "@mui/material/Button";
+import { Typography, Box, Stack, Avatar, Button } from "@mui/material";
+import Footer from "../../components/footer";
 
 export default function App() {
   return (
@@ -16,7 +13,7 @@ export default function App() {
       sx={{
         display: "grid",
         placeItems: "center", // Center the content horizontally and vertically
-        minHeight: "80vh", // Set a minimum height to fill the entire viewport
+        minHeight: "100vh", // Set a minimum height to fill the entire viewport
       }}
     >
       <Box
@@ -79,6 +76,7 @@ export default function App() {
         Hire Me
       </Button>
       */}
+      <Footer></Footer>
     </Box>
   );
 }
