@@ -6,8 +6,8 @@ import "./globals.css";
 const inter = Inter({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
-  title: "Itsuki Kigoshi",
-  description: "I'm not a robot",
+  title: "Itsuki Kigoshi - Profile",
+  description: "I'm not a robot.",
 };
 
 export default function RootLayout({
@@ -17,10 +17,10 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
-      <meta property="og:title" content="Itsuki Kigoshi: Profile" />
+      <meta property="og:title" content="Itsuki Kigoshi - Profile" />
       <meta
         property="og:description"
-        content={`Itsuki Kigoshi's Profile. I'm not a robot`}
+        content={`Itsuki Kigoshi's Profile. I'm not a robot.`}
       />
       <meta property="og:image" content="/profile.jpg" />
       <body className={inter.className}>{children}</body>
