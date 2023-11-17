@@ -25,14 +25,13 @@ export default function App() {
           placeItems: "center", // Center the content horizontally and vertically
         }}
       >
-        {" "}
         <Avatar
-          alt="Itsuki Kigoshi's Profile Picture"
-          src="/profile.jpg"
+          alt={`Itsuki Kigoshi's Profile Picture`}
+          src={`/profile.jpg`}
           sx={{ width: 200, height: 200 }}
         />
         <Typography sx={{ fontSize: 28, mt: 2 }}>Itsuki KIGOSHI</Typography>
-        <Typography sx={{ m: 2 }}>ICU '27 (2004)</Typography>
+        <Typography sx={{ m: 2 }}>{`ICU '27 (2004)`}</Typography>
         <Stack direction="row" spacing={1} alignItems="flex-end">
           {/* Those icons are repeatedly used in a similar form. Consider using a component insted.*/}
           <IconButton
