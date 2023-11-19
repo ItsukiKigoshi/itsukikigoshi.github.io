@@ -1,3 +1,5 @@
+"use client";
+
 import * as React from "react";
 import CottageIcon from "@mui/icons-material/Cottage";
 import {
@@ -11,8 +13,22 @@ import {
   Table,
   Paper,
 } from "@mui/material";
+import useMediaQuery from "@mui/material/useMediaQuery";
+import { createTheme, ThemeProvider } from "@mui/material/styles";
 
 export default function App() {
+  const prefersDarkMode = useMediaQuery("(prefers-color-scheme: dark)");
+
+  const theme = React.useMemo(
+    () =>
+      createTheme({
+        palette: {
+          mode: prefersDarkMode ? "dark" : "light",
+        },
+      }),
+    [prefersDarkMode]
+  );
+
   function createData(title: string, content: string) {
     return { title, content };
   }
@@ -32,39 +48,41 @@ export default function App() {
     ),
   ];
   return (
-    <Box
-      sx={{
-        display: "grid",
-        placeItems: "center", // Center the content horizontally and vertically
-        minHeight: "100vh", // Set a minimum height to fill the entire viewport
-        m: 3,
-      }}
-    >
-      {/* The codes below should be more readable */}
-      <Typography sx={{ fontSize: 28 }}>特定商取引法に基づく表記</Typography>
-      <Paper>
-        <TableContainer>
-          <Table sx={{ minWidth: 650 }}>
-            <TableBody>
-              {rows.map((row) => (
-                <TableRow
-                  key={row.title}
-                  sx={{ "&:last-child td, &:last-child th": { border: 0 } }}
-                >
-                  <TableCell component="th" scope="row">
-                    {row.title}
-                  </TableCell>
-                  <TableCell>{row.content}</TableCell>
-                </TableRow>
-              ))}
-            </TableBody>
-          </Table>
-        </TableContainer>
-      </Paper>
+    <ThemeProvider theme={theme}>
+      <Box
+        sx={{
+          display: "grid",
+          placeItems: "center", // Center the content horizontally and vertically
+          minHeight: "100vh", // Set a minimum height to fill the entire viewport
+          m: 3,
+        }}
+      >
+        {/* The codes below should be more readable */}
+        <Typography sx={{ fontSize: 28 }}>特定商取引法に基づく表記</Typography>
+        <Paper>
+          <TableContainer>
+            <Table sx={{ minWidth: 650 }}>
+              <TableBody>
+                {rows.map((row) => (
+                  <TableRow
+                    key={row.title}
+                    sx={{ "&:last-child td, &:last-child th": { border: 0 } }}
+                  >
+                    <TableCell component="th" scope="row">
+                      {row.title}
+                    </TableCell>
+                    <TableCell>{row.content}</TableCell>
+                  </TableRow>
+                ))}
+              </TableBody>
+            </Table>
+          </TableContainer>
+        </Paper>
 
-      <Button href="/" variant="contained" startIcon={<CottageIcon />}>
-        Go Home
-      </Button>
-    </Box>
+        <Button href="/" variant="contained" startIcon={<CottageIcon />}>
+          Go Home
+        </Button>
+      </Box>
+    </ThemeProvider>
   );
 }
