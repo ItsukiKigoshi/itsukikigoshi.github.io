@@ -1,18 +1,20 @@
-import { Box, Typography } from "@mui/material";
+import { Box, Button, ButtonGroup, Typography } from "@mui/material";
 import * as React from "react";
+import GitHubIcon from "@mui/icons-material/GitHub";
 
 export default function Footer() {
   return (
     <Box>
-      <Typography>
-        <a
+      <ButtonGroup variant="outlined" aria-label="outlined button group">
+        <Button
           href="https://github.com/ItsukiKigoshi/itsukikigoshi.github.io"
           target="_blank"
+          startIcon={<GitHubIcon />}
         >
           Source
-        </a>
-        ・<a href="/salespolicy">特定商取引法に基づく表記</a>
-      </Typography>
+        </Button>
+        ・<Button href="/salespolicy">特定商取引法に基づく表記</Button>
+      </ButtonGroup>
     </Box>
   );
 }
