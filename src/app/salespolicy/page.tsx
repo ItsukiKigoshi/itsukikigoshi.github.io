@@ -18,7 +18,7 @@ export default function App() {
   }
 
   const rows = [
-    createData("販売業社の名称/運営統括責任者", "Itsuki KIGOSHI"),
+    createData("販売業社の名称 / 運営統括責任者", "Itsuki KIGOSHI"),
     createData("所在地/住所", "請求があったら遅滞なく開示します"),
     createData("e-mail", "itsukikigoshi+githubio@gmail.com"),
     createData("引渡時期", "注文後すぐにご利用いただけます"),
@@ -36,29 +36,32 @@ export default function App() {
       sx={{
         display: "grid",
         placeItems: "center", // Center the content horizontally and vertically
-        minHeight: "80vh", // Set a minimum height to fill the entire viewport
-        m: 5,
+        minHeight: "100vh", // Set a minimum height to fill the entire viewport
+        m: 3,
       }}
     >
       {/* The codes below should be more readable */}
       <Typography sx={{ fontSize: 28 }}>特定商取引法に基づく表記</Typography>
-      <TableContainer component={Paper}>
-        <Table sx={{ minWidth: 650 }}>
-          <TableBody>
-            {rows.map((row) => (
-              <TableRow
-                key={row.title}
-                sx={{ "&:last-child td, &:last-child th": { border: 0 } }}
-              >
-                <TableCell component="th" scope="row">
-                  {row.title}
-                </TableCell>
-                <TableCell>{row.content}</TableCell>
-              </TableRow>
-            ))}
-          </TableBody>
-        </Table>
-      </TableContainer>
+      <Paper>
+        <TableContainer>
+          <Table sx={{ minWidth: 650 }}>
+            <TableBody>
+              {rows.map((row) => (
+                <TableRow
+                  key={row.title}
+                  sx={{ "&:last-child td, &:last-child th": { border: 0 } }}
+                >
+                  <TableCell component="th" scope="row">
+                    {row.title}
+                  </TableCell>
+                  <TableCell>{row.content}</TableCell>
+                </TableRow>
+              ))}
+            </TableBody>
+          </Table>
+        </TableContainer>
+      </Paper>
+
       <Button href="/" variant="contained" startIcon={<CottageIcon />}>
         Go Home
       </Button>
