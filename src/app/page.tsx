@@ -5,7 +5,7 @@ import InstagramIcon from "@mui/icons-material/Instagram";
 import GitHubIcon from "@mui/icons-material/GitHub";
 import LinkedInIcon from "@mui/icons-material/LinkedIn";
 import { Typography, Box, Stack, Avatar, Button } from "@mui/material";
-import Footer from "../../components/footer";
+import Footer from "../../components/Footer";
 
 export default function App() {
   const links = [
