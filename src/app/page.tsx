@@ -4,10 +4,49 @@ import TwitterIcon from "@mui/icons-material/Twitter";
 import InstagramIcon from "@mui/icons-material/Instagram";
 import GitHubIcon from "@mui/icons-material/GitHub";
 import LinkedInIcon from "@mui/icons-material/LinkedIn";
-import { Typography, Box, Stack, Avatar } from "@mui/material";
+import { Typography, Box, Stack, Avatar, Button } from "@mui/material";
 import Footer from "../../components/footer";
 
 export default function App() {
+  const links = [
+    {
+      name: "Instagram",
+      Icon: InstagramIcon,
+      href: "https://www.instagram.com/itsukikigoshi",
+    },
+    {
+      name: "X(formally Twitter)",
+      Icon: TwitterIcon,
+      href: "https://www.twitter.com/itsukikigoshi",
+    },
+    {
+      name: "GitHub",
+      Icon: GitHubIcon,
+      href: "https://www.github.com/itsukikigoshi",
+    },
+    {
+      name: "LinkedIn",
+      Icon: LinkedInIcon,
+      href: "https://www.linkedin.com/in/itsukikigoshi",
+    },
+  ];
+
+  const linkButtons = links.map(
+    (
+      link // This is a map function. It is used to create a list of elements.
+    ) => (
+      <IconButton
+        key={link.name} // This is a unique key for each element. It is used to identify each element.
+        href={link.href}
+        target="_blank"
+        color="primary"
+        aria-label={link.name}
+      >
+        <link.Icon />
+      </IconButton>
+    )
+  );
+
   return (
     <Box
       sx={{
@@ -30,52 +69,9 @@ export default function App() {
         <Typography sx={{ fontSize: 28, mt: 2 }}>Itsuki KIGOSHI</Typography>
         <Typography sx={{ m: 2 }}>{`ICU '27 (2004)`}</Typography>
         <Stack direction="row" spacing={1} alignItems="flex-end">
-          {/* Those icons are repeatedly used in a similar form. Consider using a component insted.*/}
-          <IconButton
-            href="https://www.instagram.com/itsukikigoshi"
-            target="_blank"
-            color="primary"
-            aria-label="Instagram"
-          >
-            <InstagramIcon />
-          </IconButton>
-          <IconButton
-            href="https://www.twitter.com/itsukikigoshi"
-            target="_blank"
-            color="primary"
-            aria-label="X(formally Twitter)"
-          >
-            <TwitterIcon />
-          </IconButton>
-          <IconButton
-            href="https://www.github.com/itsukikigoshi"
-            target="_blank"
-            color="primary"
-            aria-label="GitHub"
-          >
-            <GitHubIcon />
-          </IconButton>
-          <IconButton
-            href="https://www.linkedin.com/in/itsukikigoshi"
-            target="_blank"
-            color="primary"
-            aria-label="LinkedIn"
-          >
-            <LinkedInIcon />
-          </IconButton>
+          {linkButtons}
         </Stack>
       </Box>
-
-      {/*Button for job offer*/}
-      {/*
-      <Button
-        variant="outlined"
-        href="http://www.ansin-teacher.net/data/teacher59096.html"
-        target="_blank"
-      >
-        Hire Me
-      </Button>
-      */}
       <Footer></Footer>
     </Box>
   );
