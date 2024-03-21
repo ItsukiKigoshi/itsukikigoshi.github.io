@@ -6,7 +6,7 @@ import { Button, ButtonGroup, Stack } from "@mui/material";
 export default function Footer() {
   const row_1 = [
     {
-      title: "Hire Me",
+      title: "家庭教師として雇う",
       url: "http://www.ansin-teacher.net/data/teacher59096.html",
       icon: <SendIcon />,
     },
