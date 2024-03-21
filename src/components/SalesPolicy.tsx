@@ -1,12 +1,5 @@
 import CottageIcon from "@mui/icons-material/Cottage";
-import {
-  Box,
-  Button,
-  ThemeProvider,
-  Typography,
-  createTheme,
-} from "@mui/material";
-import { orange } from "@mui/material/colors";
+import { Box, Button, Typography } from "@mui/material";
 
 export default function SalesPolicy() {
   function createData(title: string, content: string) {
@@ -28,41 +21,34 @@ export default function SalesPolicy() {
     ),
   ];
 
-  const theme = createTheme({
-    palette: {
-      primary: orange,
-    },
-  });
   return (
-    <ThemeProvider theme={theme}>
+    <Box
+      sx={{
+        display: "grid",
+        placeItems: "center", // Center the content horizontally and vertically
+        minHeight: "100vh", // Set a minimum height to fill the entire viewport
+        m: 2,
+        p: 2,
+      }}
+    >
+      <Typography sx={{ fontSize: 24 }}>特定商取引法に基づく表記</Typography>
       <Box
         sx={{
           display: "grid",
-          placeItems: "center", // Center the content horizontally and vertically
-          minHeight: "100vh", // Set a minimum height to fill the entire viewport
-          m: 2,
-          p: 2,
+          placeItems: "left",
         }}
       >
-        <Typography sx={{ fontSize: 24 }}>特定商取引法に基づく表記</Typography>
-        <Box
-          sx={{
-            display: "grid",
-            placeItems: "left",
-          }}
-        >
-          {rows.map((row) => (
-            <Box key={row.title} sx={{ my: 1 }}>
-              <Typography sx={{ fontWeight: "bold" }}>{row.title}</Typography>
-              <Typography>{row.content}</Typography>
-            </Box>
-          ))}
-        </Box>
-
-        <Button href="/" variant="contained" startIcon={<CottageIcon />}>
-          Go Home
-        </Button>
+        {rows.map((row) => (
+          <Box key={row.title} sx={{ my: 1 }}>
+            <Typography sx={{ fontWeight: "bold" }}>{row.title}</Typography>
+            <Typography>{row.content}</Typography>
+          </Box>
+        ))}
       </Box>
-    </ThemeProvider>
+
+      <Button href="/" variant="contained" startIcon={<CottageIcon />}>
+        Go Home
+      </Button>
+    </Box>
   );
 }
