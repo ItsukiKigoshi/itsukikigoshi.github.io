@@ -52,49 +52,6 @@ export default function Main() {
     )
   );
 
-  // const works = [
-  //   {
-  //     title: "ICU Catalogue",
-  //     description: "国際基督教大学の履修登録アプリ",
-  //     type: "Personal Project",
-  //     role: "Frontend Developer",
-  //     image: "/icu-catalogue.png",
-  //     url: "https://www.catalogue.icu",
-  //   },
-  //   {
-  //     title: "Seiryofes.com (2023)",
-  //     description: "日比谷高校文化祭の整理券アプリ",
-  //     type: "Team Project",
-  //     role: "Frontend Developer",
-  //     image: "/seiryofes.jpeg",
-  //     url: "https://2023.seiryofes.com",
-  //   },
-  // ];
-
-  // const worksCards = works.map((work) => (
-  //   <Card
-  //     sx={{ maxWidth: 345 }}
-  //     key={work.title}
-  //     color="primary"
-  //     component="a"
-  //     href={work.url}
-  //     target="_blank"
-  //   >
-  //     <CardMedia sx={{ height: 140 }} image={work.image} title={work.title} />
-  //     <CardContent>
-  //       <Typography gutterBottom variant="h5" component="div">
-  //         {work.title}
-  //       </Typography>
-  //       <Typography variant="body2" color="text.secondary">
-  //         {work.role}
-  //       </Typography>
-  //       <Typography variant="body2" color="text.secondary">
-  //         {work.description}
-  //       </Typography>
-  //     </CardContent>
-  //   </Card>
-  // ));
-
   return (
     <Box
       sx={{
@@ -131,12 +88,6 @@ export default function Main() {
           {linkButtons}
         </Stack>
       </Stack>
-      {/* <Stack spacing={1}>
-        <Typography variant="h5">Works</Typography>
-        <Stack direction="row" spacing={2}>
-          {worksCards}
-        </Stack>
-      </Stack> */}
     </Box>
   );
 }
