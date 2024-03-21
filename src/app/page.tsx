@@ -2,13 +2,10 @@
 import Footer from "@/components/Footer";
 import Main from "@/components/Main";
 import { Box, ThemeProvider, createTheme } from "@mui/material";
-import { orange } from "@mui/material/colors";
 
 export default function App() {
   const theme = createTheme({
-    palette: {
-      primary: orange,
-    },
+    palette: {},
   });
   return (
     <ThemeProvider theme={theme}>
