@@ -2,7 +2,7 @@ import GitHubIcon from "@mui/icons-material/GitHub";
 import InstagramIcon from "@mui/icons-material/Instagram";
 import LinkedInIcon from "@mui/icons-material/LinkedIn";
 import PodcastsIcon from "@mui/icons-material/Podcasts";
-import TwitterIcon from "@mui/icons-material/Twitter";
+import XIcon from "@mui/icons-material/X";
 import {
   Avatar,
   Box,
@@ -25,9 +25,9 @@ export default function Main() {
       href: "https://www.instagram.com/itsukikigoshi",
     },
     {
-      name: "X(formally Twitter)",
-      Icon: TwitterIcon,
-      href: "https://www.twitter.com/itsukikigoshi",
+      name: "X",
+      Icon: XIcon,
+      href: "https://www.x.com/itsukikigoshi",
     },
     {
       name: "Podcast",
