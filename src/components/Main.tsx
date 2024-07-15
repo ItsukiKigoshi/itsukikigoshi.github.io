@@ -36,21 +36,17 @@ export default function Main() {
     },
   ];
 
-  const linkButtons = links.map(
-    (
-      link // This is a map function. It is used to create a list of elements.
-    ) => (
-      <IconButton
-        key={link.name} // This is a unique key for each element. It is used to identify each element.
-        href={link.href}
-        target="_blank"
-        color="primary"
-        aria-label={link.name}
-      >
-        <link.Icon />
-      </IconButton>
-    )
-  );
+  const linkButtons = links.map((link) => (
+    <IconButton
+      key={link.name}
+      href={link.href}
+      target="_blank"
+      color="primary"
+      aria-label={link.name}
+    >
+      <link.Icon />
+    </IconButton>
+  ));
 
   return (
     <Box
