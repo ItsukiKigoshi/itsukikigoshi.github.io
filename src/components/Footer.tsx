@@ -6,7 +6,32 @@ import TipsAndUpdatesIcon from "@mui/icons-material/TipsAndUpdates";
 import { Button, ButtonGroup, Paper, Stack } from "@mui/material";
 
 export default function Footer() {
-  const row_1 = [
+  type Items = {
+    title: string;
+    url: string;
+    inNewTab: boolean;
+    icon: React.ReactNode;
+  };
+
+  const mapButtons = (items: Items[]): React.ReactNode => {
+    return items.map((item) => (
+      <Button
+        key={item.title}
+        href={item.url}
+        target={item.inNewTab ? "_blank" : "_self"}
+        startIcon={item.icon}
+        variant={
+          typeof window !== "undefined" && window.location.pathname === item.url
+            ? "contained"
+            : "outlined"
+        }
+      >
+        {item.title}
+      </Button>
+    ));
+  };
+
+  const row_1 = mapButtons([
     {
       title: "Home",
       url: "/",
@@ -16,49 +41,31 @@ export default function Footer() {
     {
       title: "Curation",
       url: "/curation",
-      isNewTab: false,
+      inNewTab: false,
       icon: <TipsAndUpdatesIcon />,
     },
     {
       title: "Reading",
       url: "/reading",
-      isNewTab: false,
+      inNewTab: false,
       icon: <AutoStoriesIcon />,
     },
-  ].map((item) => (
-    <Button
-      key={item.title}
-      href={item.url}
-      target={item.isNewTab ? "_blank" : "_self"}
-      startIcon={item.icon}
-    >
-      {item.title}
-    </Button>
-  ));
+  ]);
 
-  const row_2 = [
+  const row_2 = mapButtons([
     {
       title: "特定商取引法に基づく表記",
       url: "/salespolicy",
-      isNewTab: false,
+      inNewTab: false,
       icon: <InfoIcon />,
     },
     {
       title: "Source",
       url: "https://github.com/ItsukiKigoshi/itsukikigoshi.github.io",
-      isNewTab: true,
+      inNewTab: true,
       icon: <GitHubIcon />,
     },
-  ].map((item) => (
-    <Button
-      key={item.title}
-      href={item.url}
-      target={item.isNewTab ? "_blank" : "_self"}
-      startIcon={item.icon}
-    >
-      {item.title}
-    </Button>
-  ));
+  ]);
 
   return (
     <Paper
