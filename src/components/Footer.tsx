@@ -1,25 +1,35 @@
 import GitHubIcon from "@mui/icons-material/GitHub";
 import InfoIcon from "@mui/icons-material/Info";
-import SendIcon from "@mui/icons-material/Send";
-import { Button, ButtonGroup, Stack } from "@mui/material";
+import AutoStoriesIcon from "@mui/icons-material/AutoStories";
+import CottageIcon from "@mui/icons-material/Cottage";
+import TipsAndUpdatesIcon from "@mui/icons-material/TipsAndUpdates";
+import { Button, ButtonGroup, Paper, Stack } from "@mui/material";
 
 export default function Footer() {
   const row_1 = [
     {
-      title: "家庭教師として雇う",
-      url: "http://www.ansin-teacher.net/data/teacher59096.html",
-      icon: <SendIcon />,
+      title: "Home",
+      url: "/",
+      inNewTab: false,
+      icon: <CottageIcon />,
     },
     {
-      title: "Source",
-      url: "https://github.com/ItsukiKigoshi/itsukikigoshi.github.io",
-      icon: <GitHubIcon />,
+      title: "Curation",
+      url: "/curation",
+      isNewTab: false,
+      icon: <TipsAndUpdatesIcon />,
+    },
+    {
+      title: "Reading",
+      url: "/reading",
+      isNewTab: false,
+      icon: <AutoStoriesIcon />,
     },
   ].map((item) => (
     <Button
       key={item.title}
       href={item.url}
-      target="_blank"
+      target={item.isNewTab ? "_blank" : "_self"}
       startIcon={item.icon}
     >
       {item.title}
@@ -30,13 +40,20 @@ export default function Footer() {
     {
       title: "特定商取引法に基づく表記",
       url: "/salespolicy",
+      isNewTab: false,
       icon: <InfoIcon />,
+    },
+    {
+      title: "Source",
+      url: "https://github.com/ItsukiKigoshi/itsukikigoshi.github.io",
+      isNewTab: true,
+      icon: <GitHubIcon />,
     },
   ].map((item) => (
     <Button
-      variant="outlined"
       key={item.title}
       href={item.url}
+      target={item.isNewTab ? "_blank" : "_self"}
       startIcon={item.icon}
     >
       {item.title}
@@ -44,9 +61,20 @@ export default function Footer() {
   ));
 
   return (
-    <Stack useFlexGap spacing={1}>
-      {<ButtonGroup aria-label="button group">{row_1}</ButtonGroup>}
-      {row_2}
-    </Stack>
+    <Paper
+      sx={{
+        position: "fixed",
+        bottom: 0,
+        left: 0,
+        right: 0,
+        p: 2,
+      }}
+      elevation={0}
+    >
+      <Stack spacing={1} alignItems="center">
+        {<ButtonGroup>{row_1}</ButtonGroup>}
+        {<ButtonGroup>{row_2}</ButtonGroup>}
+      </Stack>
+    </Paper>
   );
 }

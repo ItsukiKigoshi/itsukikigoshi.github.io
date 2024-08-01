@@ -1,6 +1,12 @@
 "use client";
-import { createTheme, ThemeProvider, useMediaQuery } from "@mui/material";
-import { AppRouterCacheProvider } from "@mui/material-nextjs/v13-appRouter";
+import Footer from "@/components/Footer";
+import {
+  createTheme,
+  Stack,
+  ThemeProvider,
+  useMediaQuery,
+} from "@mui/material";
+import { AppRouterCacheProvider } from "@mui/material-nextjs/v14-appRouter";
 import React from "react";
 
 export default function Template({ children }: { children: React.ReactNode }) {
@@ -15,9 +21,21 @@ export default function Template({ children }: { children: React.ReactNode }) {
       }),
     [prefersDarkMode]
   );
+
   return (
     <AppRouterCacheProvider>
-      <ThemeProvider theme={theme}>{children}</ThemeProvider>
+      <ThemeProvider theme={theme}>
+        <Stack
+          sx={{ minHeight: "100vh" }}
+          direction="column"
+          justifyContent="center"
+          alignItems="center"
+          spacing={10}
+        >
+          {children}
+          <Footer />
+        </Stack>
+      </ThemeProvider>
     </AppRouterCacheProvider>
   );
 }
