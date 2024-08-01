@@ -20,11 +20,6 @@ export default function Footer() {
         href={item.url}
         target={item.inNewTab ? "_blank" : "_self"}
         startIcon={item.icon}
-        variant={
-          typeof window !== "undefined" && window.location.pathname === item.url
-            ? "contained"
-            : "outlined"
-        }
       >
         {item.title}
       </Button>
@@ -70,7 +65,7 @@ export default function Footer() {
   return (
     <Paper
       sx={{
-        position: "fixed",
+        position: "relative",
         bottom: 0,
         left: 0,
         right: 0,

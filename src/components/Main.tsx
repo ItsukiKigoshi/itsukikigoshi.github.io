@@ -48,7 +48,6 @@ export default function Main() {
         justifyContent="center"
         sx={{
           display: "grid",
-          maxHeight: "60vh",
           placeItems: "center", // Center the content horizontally and vertically
         }}
         my={2}
