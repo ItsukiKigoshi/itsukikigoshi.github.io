@@ -1,5 +1,4 @@
-import CottageIcon from "@mui/icons-material/Cottage";
-import { Box, Button, Typography } from "@mui/material";
+import { Box, Stack, Typography } from "@mui/material";
 
 export default function SalesPolicy() {
   function createData(title: string, content: string) {
@@ -22,14 +21,12 @@ export default function SalesPolicy() {
   ];
 
   return (
-    <Box
-      sx={{
-        display: "grid",
-        placeItems: "center", // Center the content horizontally and vertically
-        minHeight: "100vh", // Set a minimum height to fill the entire viewport
-        m: 2,
-        p: 2,
-      }}
+    <Stack
+      direction="column"
+      justifyContent="center"
+      alignItems="center"
+      spacing={2}
+      p={2}
     >
       <Typography sx={{ fontSize: 24 }}>特定商取引法に基づく表記</Typography>
       <Box
@@ -45,10 +42,6 @@ export default function SalesPolicy() {
           </Box>
         ))}
       </Box>
-
-      <Button href="/" variant="contained" startIcon={<CottageIcon />}>
-        Go Home
-      </Button>
-    </Box>
+    </Stack>
   );
 }
