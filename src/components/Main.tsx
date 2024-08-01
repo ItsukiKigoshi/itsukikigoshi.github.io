@@ -7,6 +7,8 @@ import {
   Avatar,
   Box,
   Button,
+  Card,
+  CardContent,
   IconButton,
   Stack,
   Typography,
@@ -78,6 +80,9 @@ export default function Main() {
         <Stack sx={{ justifyContent: "center" }} direction="row" spacing={2}>
           {linkButtons}
         </Stack>
+        <Card>
+          <CardContent></CardContent>
+        </Card>
       </Stack>
     </Box>
   );
