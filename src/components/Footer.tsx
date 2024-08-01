@@ -65,6 +65,7 @@ export default function Footer() {
   return (
     <Paper
       sx={{
+        backgroundColor: "transparent",
         position: "relative",
         bottom: 0,
         left: 0,
