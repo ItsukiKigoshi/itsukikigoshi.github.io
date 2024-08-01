@@ -29,11 +29,6 @@ export default function Main() {
       Icon: XIcon,
       href: "https://www.x.com/itsukikigoshi",
     },
-    {
-      name: "Podcast",
-      Icon: PodcastsIcon,
-      href: "https://podcasters.spotify.com/pod/show/n-dimensions",
-    },
   ];
 
   const linkButtons = links.map((link) => (
@@ -71,7 +66,7 @@ export default function Main() {
         <Typography sx={{ fontSize: 28 }}>Itsuki KIGOSHI</Typography>
         <Typography>{`ICU '27 (2004)`}</Typography>
       </Stack>
-      <Stack useFlexGap spacing={1}>
+      <Stack spacing={1}>
         <Button
           startIcon={<LinkedInIcon />}
           variant="contained"
@@ -80,7 +75,7 @@ export default function Main() {
         >
           Open to Work!
         </Button>
-        <Stack direction="row" spacing={2} alignItems="flex-end">
+        <Stack sx={{ justifyContent: "center" }} direction="row" spacing={2}>
           {linkButtons}
         </Stack>
       </Stack>
