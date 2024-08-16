@@ -1,21 +1,31 @@
+"use client";
 import GitHubIcon from "@mui/icons-material/GitHub";
 import InstagramIcon from "@mui/icons-material/Instagram";
 import LinkedInIcon from "@mui/icons-material/LinkedIn";
-import ExpandMoreIcon from "@mui/icons-material/ExpandMore";
+import TipsAndUpdatesIcon from "@mui/icons-material/TipsAndUpdates";
 import {
-  Accordion,
-  AccordionDetails,
-  AccordionSummary,
   Avatar,
   Box,
   Button,
   IconButton,
-  Link,
   Stack,
   Typography,
 } from "@mui/material";
 
+import DialogAboutMe from "@/components/DialogAboutMe";
+import { useState } from "react";
+
 export default function Main() {
+  const [open, setOpen] = useState(false);
+
+  const handleClickOpen = () => {
+    setOpen(true);
+  };
+
+  const handleClose = () => {
+    setOpen(false);
+  };
+
   const links = [
     {
       name: "GitHub",
@@ -68,6 +78,14 @@ export default function Main() {
       </Stack>
       <Stack spacing={1}>
         <Button
+          startIcon={<TipsAndUpdatesIcon />}
+          variant="outlined"
+          onClick={handleClickOpen}
+        >
+          About Me
+        </Button>
+        <DialogAboutMe open={open} onClose={handleClose} />
+        <Button
           startIcon={<LinkedInIcon />}
           variant="contained"
           href="https://www.linkedin.com/in/itsukikigoshi"
@@ -78,16 +96,6 @@ export default function Main() {
         <Stack sx={{ justifyContent: "center" }} direction="row" spacing={2}>
           {linkButtons}
         </Stack>
-        {/* <Accordion>
-          <AccordionSummary
-            expandIcon={<ExpandMoreIcon />}
-            aria-controls="panel1-content"
-            id="panel1-header"
-          >
-            About Me
-          </AccordionSummary>
-          <AccordionDetails></AccordionDetails>
-        </Accordion> */}
       </Stack>
     </Box>
   );

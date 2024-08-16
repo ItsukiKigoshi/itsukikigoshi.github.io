@@ -1,6 +1,5 @@
 import GitHubIcon from "@mui/icons-material/GitHub";
 import InfoIcon from "@mui/icons-material/Info";
-import AutoStoriesIcon from "@mui/icons-material/AutoStories";
 import CottageIcon from "@mui/icons-material/Cottage";
 import { Button, ButtonGroup, Paper, Stack } from "@mui/material";
 
@@ -25,22 +24,13 @@ export default function Footer() {
     ));
   };
 
-  const row_1 = mapButtons([
+  const button_group = mapButtons([
     {
       title: "Home",
       url: "/",
       inNewTab: false,
       icon: <CottageIcon />,
     },
-    {
-      title: "About Me",
-      url: "https://github.com/ItsukiKigoshi/ItsukiKigoshi/blob/main/README.md",
-      inNewTab: true,
-      icon: <AutoStoriesIcon />,
-    },
-  ]);
-
-  const row_2 = mapButtons([
     {
       title: "特定商取引法に基づく表記",
       url: "/salespolicy",
@@ -68,8 +58,7 @@ export default function Footer() {
       elevation={0}
     >
       <Stack spacing={1} alignItems="center">
-        {<ButtonGroup>{row_1}</ButtonGroup>}
-        {<ButtonGroup>{row_2}</ButtonGroup>}
+        {<ButtonGroup>{button_group}</ButtonGroup>}
       </Stack>
     </Paper>
   );
