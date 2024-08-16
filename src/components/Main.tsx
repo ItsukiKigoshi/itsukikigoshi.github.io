@@ -1,11 +1,16 @@
 import GitHubIcon from "@mui/icons-material/GitHub";
 import InstagramIcon from "@mui/icons-material/Instagram";
 import LinkedInIcon from "@mui/icons-material/LinkedIn";
+import ExpandMoreIcon from "@mui/icons-material/ExpandMore";
 import {
+  Accordion,
+  AccordionDetails,
+  AccordionSummary,
   Avatar,
   Box,
   Button,
   IconButton,
+  Link,
   Stack,
   Typography,
 } from "@mui/material";
@@ -73,6 +78,16 @@ export default function Main() {
         <Stack sx={{ justifyContent: "center" }} direction="row" spacing={2}>
           {linkButtons}
         </Stack>
+        {/* <Accordion>
+          <AccordionSummary
+            expandIcon={<ExpandMoreIcon />}
+            aria-controls="panel1-content"
+            id="panel1-header"
+          >
+            About Me
+          </AccordionSummary>
+          <AccordionDetails></AccordionDetails>
+        </Accordion> */}
       </Stack>
     </Box>
   );
