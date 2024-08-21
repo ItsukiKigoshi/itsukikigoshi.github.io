@@ -12,20 +12,7 @@ import {
   Typography,
 } from "@mui/material";
 
-import DialogAboutMe from "@/components/DialogAboutMe";
-import { useState } from "react";
-
 export default function Main() {
-  const [open, setOpen] = useState(false);
-
-  const handleClickOpen = () => {
-    setOpen(true);
-  };
-
-  const handleClose = () => {
-    setOpen(false);
-  };
-
   const links = [
     {
       name: "GitHub",
@@ -80,11 +67,11 @@ export default function Main() {
         <Button
           startIcon={<TipsAndUpdatesIcon />}
           variant="outlined"
-          onClick={handleClickOpen}
+          href="https://github.com/ItsukiKigoshi/ItsukiKigoshi/blob/main/README.md"
+          target="_blank"
         >
           About Me
         </Button>
-        <DialogAboutMe open={open} onClose={handleClose} />
         <Button
           startIcon={<LinkedInIcon />}
           variant="contained"
