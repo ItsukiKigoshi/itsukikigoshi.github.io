@@ -1,7 +1,7 @@
 import GitHubIcon from "@mui/icons-material/GitHub";
 import InfoIcon from "@mui/icons-material/Info";
 import CottageIcon from "@mui/icons-material/Cottage";
-import { Button, ButtonGroup, Paper, Stack } from "@mui/material";
+import { Button, ButtonGroup, Link, Paper, Stack } from "@mui/material";
 
 export default function Footer() {
   type Items = {
@@ -37,12 +37,6 @@ export default function Footer() {
       inNewTab: false,
       icon: <InfoIcon />,
     },
-    {
-      title: "Source",
-      url: "https://github.com/ItsukiKigoshi/itsukikigoshi.github.io",
-      inNewTab: true,
-      icon: <GitHubIcon />,
-    },
   ]);
 
   return (
@@ -59,6 +53,12 @@ export default function Footer() {
     >
       <Stack spacing={1} alignItems="center">
         {<ButtonGroup>{button_group}</ButtonGroup>}
+        <Link
+          href="https://github.com/ItsukiKigoshi/itsukikigoshi.github.io"
+          target="_blank"
+        >
+          Source of This Site
+        </Link>
       </Stack>
     </Paper>
   );

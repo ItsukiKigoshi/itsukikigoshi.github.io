@@ -2,7 +2,6 @@
 import GitHubIcon from "@mui/icons-material/GitHub";
 import InstagramIcon from "@mui/icons-material/Instagram";
 import LinkedInIcon from "@mui/icons-material/LinkedIn";
-import TipsAndUpdatesIcon from "@mui/icons-material/TipsAndUpdates";
 import {
   Avatar,
   Box,
@@ -65,20 +64,19 @@ export default function Main() {
       </Stack>
       <Stack spacing={1}>
         <Button
-          startIcon={<TipsAndUpdatesIcon />}
-          variant="outlined"
-          href="https://github.com/ItsukiKigoshi/ItsukiKigoshi/blob/main/README.md"
-          target="_blank"
-        >
-          About Me
-        </Button>
-        <Button
           startIcon={<LinkedInIcon />}
-          variant="contained"
+          variant="outlined"
           href="https://www.linkedin.com/in/itsukikigoshi"
           target="_blank"
         >
-          Open to Work!
+          LinkedIn
+        </Button>
+        <Button
+          variant="outlined"
+          href="https://www.wantedly.com/id/itsukikigoshi"
+          target="_blank"
+        >
+          Wantedly
         </Button>
         <Stack sx={{ justifyContent: "center" }} direction="row" spacing={2}>
           {linkButtons}
