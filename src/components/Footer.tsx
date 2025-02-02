@@ -6,7 +6,7 @@ import { Button, ButtonGroup, Link, Paper, Stack } from "@mui/material";
 export default function Footer() {
   type Items = {
     title: string;
-    url: string;
+    pathname: string;
     inNewTab: boolean;
     icon: React.ReactNode;
   };
@@ -15,7 +15,7 @@ export default function Footer() {
     return items.map((item) => (
       <Button
         key={item.title}
-        href={item.url}
+        href={item.pathname}
         target={item.inNewTab ? "_blank" : "_self"}
         startIcon={item.icon}
       >
@@ -24,20 +24,20 @@ export default function Footer() {
     ));
   };
 
-  const button_group = mapButtons([
+  const button_group = [
     {
       title: "Home",
-      url: "/",
+      pathname: "/",
       inNewTab: false,
       icon: <CottageIcon />,
     },
     {
       title: "特定商取引法に基づく表記",
-      url: "/salespolicy",
+      pathname: "/salespolicy",
       inNewTab: false,
       icon: <InfoIcon />,
     },
-  ]);
+  ];
 
   return (
     <Paper
@@ -52,7 +52,20 @@ export default function Footer() {
       elevation={0}
     >
       <Stack spacing={1} alignItems="center">
-        {<ButtonGroup>{button_group}</ButtonGroup>}
+        <ButtonGroup>
+          {button_group
+            .filter((button_item) => button_item.pathname !== location.pathname)
+            .map((button_item) => (
+              <Button
+                key={button_item.title}
+                href={button_item.pathname}
+                target={button_item.inNewTab ? "_blank" : "_self"}
+                startIcon={button_item.icon}
+              >
+                {button_item.title}
+              </Button>
+            ))}
+        </ButtonGroup>
         <Link
           href="https://github.com/ItsukiKigoshi/itsukikigoshi.github.io"
           target="_blank"
