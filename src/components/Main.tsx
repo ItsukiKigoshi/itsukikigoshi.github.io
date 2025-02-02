@@ -2,6 +2,8 @@
 import GitHubIcon from "@mui/icons-material/GitHub";
 import InstagramIcon from "@mui/icons-material/Instagram";
 import LinkedInIcon from "@mui/icons-material/LinkedIn";
+import TheatersIcon from '@mui/icons-material/Theaters';
+import AutoStoriesIcon from '@mui/icons-material/AutoStories';
 import {
   Avatar,
   Box,
@@ -14,14 +16,24 @@ import {
 export default function Main() {
   const links = [
     {
+      name: "Instagram",
+      Icon: InstagramIcon,
+      href: "https://www.instagram.com/itsukikigoshi",
+    },
+      {
       name: "GitHub",
       Icon: GitHubIcon,
       href: "https://www.github.com/itsukikigoshi",
     },
     {
-      name: "Instagram",
-      Icon: InstagramIcon,
-      href: "https://www.instagram.com/itsukikigoshi",
+      name: "Booklog",
+      Icon: AutoStoriesIcon,
+      href: "https://booklog.jp/users/itsukikigoshi",
+    },
+    {
+      name: "IMDb",
+      Icon: TheatersIcon,
+      href: "https://www.imdb.com/user/ur163313033/",
     },
   ];
 
