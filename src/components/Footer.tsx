@@ -1,28 +1,10 @@
-import GitHubIcon from "@mui/icons-material/GitHub";
 import InfoIcon from "@mui/icons-material/Info";
 import CottageIcon from "@mui/icons-material/Cottage";
 import { Button, ButtonGroup, Link, Paper, Stack } from "@mui/material";
+import { usePathname } from "next/navigation";
 
 export default function Footer() {
-  type Items = {
-    title: string;
-    pathname: string;
-    inNewTab: boolean;
-    icon: React.ReactNode;
-  };
-
-  const mapButtons = (items: Items[]): React.ReactNode => {
-    return items.map((item) => (
-      <Button
-        key={item.title}
-        href={item.pathname}
-        target={item.inNewTab ? "_blank" : "_self"}
-        startIcon={item.icon}
-      >
-        {item.title}
-      </Button>
-    ));
-  };
+  const pathname = usePathname();
 
   const button_group = [
     {
@@ -54,7 +36,7 @@ export default function Footer() {
       <Stack spacing={1} alignItems="center">
         <ButtonGroup>
           {button_group
-            .filter((button_item) => button_item.pathname !== location.pathname)
+            .filter((button_item) => button_item.pathname !== pathname)
             .map((button_item) => (
               <Button
                 key={button_item.title}

@@ -1,9 +1,8 @@
-"use client";
 import GitHubIcon from "@mui/icons-material/GitHub";
 import InstagramIcon from "@mui/icons-material/Instagram";
 import LinkedInIcon from "@mui/icons-material/LinkedIn";
-import TheatersIcon from '@mui/icons-material/Theaters';
-import AutoStoriesIcon from '@mui/icons-material/AutoStories';
+import TheatersIcon from "@mui/icons-material/Theaters";
+import AutoStoriesIcon from "@mui/icons-material/AutoStories";
 import {
   Avatar,
   Box,
@@ -20,7 +19,7 @@ export default function Main() {
       Icon: InstagramIcon,
       href: "https://www.instagram.com/itsukikigoshi",
     },
-      {
+    {
       name: "GitHub",
       Icon: GitHubIcon,
       href: "https://www.github.com/itsukikigoshi",
