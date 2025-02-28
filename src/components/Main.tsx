@@ -3,12 +3,14 @@ import InstagramIcon from "@mui/icons-material/Instagram";
 import LinkedInIcon from "@mui/icons-material/LinkedIn";
 import TheatersIcon from "@mui/icons-material/Theaters";
 import AutoStoriesIcon from "@mui/icons-material/AutoStories";
+import LandscapeIcon from "@mui/icons-material/Landscape";
 import {
   Avatar,
   Box,
   Button,
   IconButton,
   Stack,
+  Tooltip,
   Typography,
 } from "@mui/material";
 
@@ -34,18 +36,24 @@ export default function Main() {
       Icon: TheatersIcon,
       href: "https://www.imdb.com/user/ur163313033/",
     },
+    {
+      name: "YAMAP",
+      Icon: LandscapeIcon,
+      href: "https://yamap.com/users/3971974",
+    },
   ];
 
   const linkButtons = links.map((link) => (
-    <IconButton
-      key={link.name}
-      href={link.href}
-      target="_blank"
-      color="primary"
-      aria-label={link.name}
-    >
-      <link.Icon />
-    </IconButton>
+    <Tooltip title={link.name} key={link.name}>
+      <IconButton
+        href={link.href}
+        target="_blank"
+        color="primary"
+        aria-label={link.name}
+      >
+        <link.Icon />
+      </IconButton>
+    </Tooltip>
   ));
 
   return (
@@ -81,13 +89,6 @@ export default function Main() {
           target="_blank"
         >
           LinkedIn
-        </Button>
-        <Button
-          variant="outlined"
-          href="https://www.wantedly.com/id/itsukikigoshi"
-          target="_blank"
-        >
-          Wantedly
         </Button>
         <Stack sx={{ justifyContent: "center" }} direction="row" spacing={2}>
           {linkButtons}
