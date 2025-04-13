@@ -5,7 +5,7 @@ import "./globals.css";
 const inter = Inter({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
-  title: "Itsuki Kigoshi - Profile",
+  title: "Itsuki Kigoshi / 木越 斎 - Profile",
   description: "I'm not a robot.",
 };
 
