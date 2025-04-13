@@ -79,7 +79,7 @@ export default function Main() {
           sx={{ width: 200, height: 200 }}
         />
         <Typography sx={{ fontSize: 28 }}>Itsuki Kigoshi / 木越 斎</Typography>
-        <Typography>ICU'27 (2004)</Typography>
+        <Typography>ICU&apos;27 (2004)</Typography>
         <Typography>Public Policy, Math, Contemporary Art</Typography>
       </Stack>
       <Stack spacing={1}>
