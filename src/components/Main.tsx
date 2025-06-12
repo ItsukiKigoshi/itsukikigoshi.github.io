@@ -9,6 +9,7 @@ import {
   Box,
   Button,
   IconButton,
+  Link,
   Stack,
   Tooltip,
   Typography,
@@ -25,6 +26,11 @@ export default function Main() {
       name: "GitHub",
       Icon: GitHubIcon,
       href: "https://www.github.com/itsukikigoshi",
+    },
+    {
+      name: "LinkedIn",
+      Icon: LinkedInIcon,
+      href: "https://www.linkedin.com/in/itsukikigoshi",
     },
     {
       name: "Booklog",
@@ -79,21 +85,14 @@ export default function Main() {
           sx={{ width: 200, height: 200 }}
         />
         <Typography sx={{ fontSize: 28 }}>Itsuki Kigoshi / 木越 斎</Typography>
-        <Typography>ICU&apos;27 (2004)</Typography>
-        <Typography>Public Policy, Math, Contemporary Art</Typography>
+        <Typography>ICU'27 (2004)</Typography>
+        <Typography>
+          Math, Contemporary Art と ちょっと山登り{" "}
+          <Link href="https://github.com/ItsukiKigoshi">+More</Link>
+        </Typography>
       </Stack>
-      <Stack spacing={1}>
-        <Button
-          startIcon={<LinkedInIcon />}
-          variant="outlined"
-          href="https://www.linkedin.com/in/itsukikigoshi"
-          target="_blank"
-        >
-          LinkedIn
-        </Button>
-        <Stack sx={{ justifyContent: "center" }} direction="row" spacing={2}>
-          {linkButtons}
-        </Stack>
+      <Stack sx={{ justifyContent: "center" }} direction="row" spacing={2}>
+        {linkButtons}
       </Stack>
     </Box>
   );
