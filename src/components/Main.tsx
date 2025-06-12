@@ -80,12 +80,12 @@ export default function Main() {
         spacing={2}
       >
         <Avatar
-          alt={`Itsuki Kigoshi's Profile Picture`}
+          alt={`Itsuki Kigoshi Profile Picture`}
           src={`/profile.jpg`}
           sx={{ width: 200, height: 200 }}
         />
         <Typography sx={{ fontSize: 28 }}>Itsuki Kigoshi / 木越 斎</Typography>
-        <Typography>ICU'27 (2004)</Typography>
+        <Typography>ICU&apos;27 (2004)</Typography>
         <Typography>
           Math, Contemporary Art と ちょっと山登り{" "}
           <Link href="https://github.com/ItsukiKigoshi">+More</Link>
