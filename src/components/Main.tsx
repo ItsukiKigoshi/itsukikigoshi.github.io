@@ -88,7 +88,9 @@ export default function Main() {
         <Typography>ICU&apos;27 (2004)</Typography>
         <Typography>
           Math, Contemporary Art と ちょっと山登り{" "}
-          <Link href="https://github.com/ItsukiKigoshi">+More</Link>
+          <Link href="hthttps://github.com/ItsukiKigoshi/ItsukiKigoshi/blob/main/README.md">
+            +More
+          </Link>
         </Typography>
       </Stack>
       <Stack sx={{ justifyContent: "center" }} direction="row" spacing={2}>
