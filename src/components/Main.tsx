@@ -7,9 +7,7 @@ import LandscapeIcon from "@mui/icons-material/Landscape";
 import {
   Avatar,
   Box,
-  Button,
   IconButton,
-  Link,
   Stack,
   Tooltip,
   Typography,
