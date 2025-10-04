@@ -87,10 +87,7 @@ export default function Main() {
         <Typography sx={{ fontSize: 28 }}>Itsuki Kigoshi / 木越 斎</Typography>
         <Typography>ICU&apos;27 (2004)</Typography>
         <Typography>
-          Math, Contemporary Art と ちょっと山登り{" "}
-          <Link href="https://github.com/ItsukiKigoshi/ItsukiKigoshi/blob/main/README.md">
-            +More
-          </Link>
+          Math, Contemporary Art, Climbing
         </Typography>
       </Stack>
       <Stack sx={{ justifyContent: "center" }} direction="row" spacing={2}>
