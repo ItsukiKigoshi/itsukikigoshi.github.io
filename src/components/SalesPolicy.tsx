@@ -8,7 +8,7 @@ export default function SalesPolicy() {
   const rows = [
     createData("販売業社の名称 / 運営統括責任者", "Itsuki KIGOSHI"),
     createData("所在地/住所", "請求があったら遅滞なく開示します"),
-    createData("e-mail", "itsukikigoshi+githubio@gmail.com"),
+    createData("e-mail", "itsukikigoshi+githubio[at]gmail.com"),
     createData("引渡時期", "注文後すぐにご利用いただけます"),
     createData("手数料等の追加料金", "なし"),
     createData("決済手段", "クレジットカード"),
