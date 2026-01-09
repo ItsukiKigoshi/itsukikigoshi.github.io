@@ -84,7 +84,7 @@ export default function Main() {
                 <Typography sx={{fontSize: 28}}>Itsuki Kigoshi / 木越 斎</Typography>
                 <Typography>ICU&apos;27 (2004)</Typography>
                 <Typography>
-                    Earth Science, Climbing, Contemporary Art
+                    Earth Science, Contemporary Art, Climbing
                 </Typography>
             </Stack>
             <Stack sx={{justifyContent: "center"}} direction="row" spacing={2}>
