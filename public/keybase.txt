@@ -1,0 +1,56 @@
+==================================================================
+https://keybase.io/itsukikigoshi
+--------------------------------------------------------------------
+
+I hereby claim:
+
+  * I am an admin of https://itsukikigoshi.github.io
+  * I am itsukikigoshi (https://keybase.io/itsukikigoshi) on keybase.
+  * I have a public key ASDNPhi5thww5e2NyqNN1GiYRyIkO4UnnahHgzICROvTUgo
+
+To do so, I am signing this object:
+
+{
+  "body": {
+    "key": {
+      "eldest_kid": "012012cd3164568c37fb8a4b98a8205349a7c2058e48f6eea96a184641fab3d85edc0a",
+      "host": "keybase.io",
+      "kid": "0120cd3e18b9b61c30e5ed8dcaa34dd468984722243b85279da84783320244ebd3520a",
+      "uid": "5e37316e9ba14ff13a4c87be47953d19",
+      "username": "itsukikigoshi"
+    },
+    "merkle_root": {
+      "ctime": 1767953746,
+      "hash": "15d6a7f03fa4301821885ce116b450386bf01e72a784ce476cc5e2a6ae2903f427446d7dd728673d4710f60769c8619be1c2848faad80db3ee156b3d0c1038b0",
+      "hash_meta": "c24e3ce18d11e3eb7fa88532bf5ca926b98d2ad7e259e6bfd67e623e2ab372e0",
+      "seqno": 27336155
+    },
+    "service": {
+      "entropy": "ibSQzBdG9R45NAG3GNPywFoZ",
+      "hostname": "itsukikigoshi.github.io",
+      "protocol": "https:"
+    },
+    "type": "web_service_binding",
+    "version": 2
+  },
+  "client": {
+    "name": "keybase.io go client",
+    "version": "6.5.4"
+  },
+  "ctime": 1767953783,
+  "expire_in": 504576000,
+  "prev": "1bc07de9c673f0b6ec433474466fe103b2df4a61e6eb9aa69ba18bf71f951e3d",
+  "seqno": 9,
+  "tag": "signature"
+}
+
+which yields the signature:
+
+hKRib2R5hqhkZXRhY2hlZMOpaGFzaF90eXBlCqNrZXnEIwEgzT4YubYcMOXtjcqjTdRomEciJDuFJ52oR4MyAkTr01IKp3BheWxvYWTESpcCCcQgG8B96cZz8LbsQzR0Rm/hA7LfSmHm65qmm6GL9x+VHj3EICHSBAtaNXikE0rplHaf/Q6GBo+pX6zyOlQu8B3WvDb7AgHCo3NpZ8RAoUWuIEoDGoJOHoa1JZdp6KlEm+UylbdOz1adMRNKot441UQ7rEsOE9m6JrlPTgGC9gbZ/tBy2TbHJ/OX7iENCahzaWdfdHlwZSCkaGFzaIKkdHlwZQildmFsdWXEICnsbn8S0GvE+kJMjIhRXRl47ty8CyOwcRjQRxgP/dslo3RhZ80CAqd2ZXJzaW9uAQ==
+
+And finally, I am proving ownership of this host by posting or
+appending to this document.
+
+View my publicly-auditable identity here: https://keybase.io/itsukikigoshi
+
+==================================================================
