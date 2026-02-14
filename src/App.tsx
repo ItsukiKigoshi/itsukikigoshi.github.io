@@ -25,8 +25,9 @@ export default function App() {
                 <Box sx={{
                     display: 'flex',
                     flexDirection: 'column',
-                    minHeight: '100vh',
-                    boxSizing: 'border-box'
+                    minHeight: '100dvh',
+                    width: '100vw',
+                    boxSizing: 'border-box',
                 }}>
                     <Box
                         component="main"

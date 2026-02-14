@@ -63,14 +63,12 @@ export default function Profile() {
     return (
         <Stack
             justifyContent="center"
+            spacing={2}
             sx={{
                 display: "grid",
                 placeItems: "center",
-                width: '100%',
-                margin: '0 auto',
-                flexShrink: 1,
+                width: "100%",
             }}
-            spacing={2}
         >
             <Avatar
                 alt={`Itsuki Kigoshi Profile Picture`}
@@ -82,7 +80,7 @@ export default function Profile() {
             <Typography>
                 Earth Science, Contemporary Art, Climbing
             </Typography>
-            <Stack sx={{justifyContent: "center"}} direction="row" spacing={2}>
+            <Stack sx={{justifyContent: "center"}} direction="row" spacing={1}>
                 {linkButtons}
             </Stack>
         </Stack>
