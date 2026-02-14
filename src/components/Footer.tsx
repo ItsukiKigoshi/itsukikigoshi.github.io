@@ -43,8 +43,9 @@ export default function Footer() {
                 </MuiLink>
                 <Typography>/</Typography>
                 <MuiLink
-                    component={RouterLink}
-                    to="/itsukikigoshi.asc"
+                    href="/itsukikigoshi.asc"
+                    target="_blank"
+                    rel="noopener noreferrer"
                 >
                     PGP Key
                 </MuiLink>
