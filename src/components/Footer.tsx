@@ -20,6 +20,7 @@ export default function Footer() {
             }}
             spacing={1}
             alignItems="center">
+            {/* /law以外のページがあるときの遷移に対応していない余り良くない実装 */}
             <ButtonGroup>
                 {pathname == '/' ?
                     (<Button
@@ -35,20 +36,21 @@ export default function Footer() {
             </ButtonGroup>
             <Stack direction="row" spacing={2}>
                 <MuiLink
-                    component={RouterLink}
-                    to="https://github.com/ItsukiKigoshi/itsukikigoshi.github.io"
-                    target="_blank"
-                >
-                    Source of This Site
-                </MuiLink>
-                <Typography>/</Typography>
-                <MuiLink
                     href="/itsukikigoshi.asc"
                     target="_blank"
                     rel="noopener noreferrer"
                 >
                     PGP Key
                 </MuiLink>
+                <Typography>/</Typography>
+                <MuiLink
+                    component={RouterLink}
+                    to="https://github.com/ItsukiKigoshi/itsukikigoshi.github.io"
+                    target="_blank"
+                >
+                    Source Code
+                </MuiLink>
+
             </Stack>
         </Stack>
     );
