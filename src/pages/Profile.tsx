@@ -5,6 +5,7 @@ import LinkedInIcon from "@mui/icons-material/LinkedIn";
 import TheatersIcon from "@mui/icons-material/Theaters";
 import AutoStoriesIcon from "@mui/icons-material/AutoStories";
 import LandscapeIcon from "@mui/icons-material/Landscape";
+import LanguageIcon from '@mui/icons-material/Language';
 import {Avatar, IconButton, Stack, Tooltip, Typography,} from "@mui/material";
 
 
@@ -21,14 +22,19 @@ export default function Profile() {
             href: "https://www.instagram.com/itsukikigoshi",
         },
         {
+            name: "LinkedIn",
+            Icon: LinkedInIcon,
+            href: "https://www.linkedin.com/in/itsukikigoshi",
+        },
+        {
             name: "GitHub",
             Icon: GitHubIcon,
             href: "https://www.github.com/itsukikigoshi",
         },
         {
-            name: "LinkedIn",
-            Icon: LinkedInIcon,
-            href: "https://www.linkedin.com/in/itsukikigoshi",
+            name: "Wikipedia",
+            Icon: LanguageIcon,
+            href: "https://ja.wikipedia.org/wiki/user:Itsukikigoshi",
         },
         {
             name: "Booklog",
