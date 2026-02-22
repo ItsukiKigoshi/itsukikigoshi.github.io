@@ -1,6 +1,5 @@
 import EmailIcon from "@mui/icons-material/Email"
 import GitHubIcon from "@mui/icons-material/GitHub";
-import InstagramIcon from "@mui/icons-material/Instagram";
 import LinkedInIcon from "@mui/icons-material/LinkedIn";
 import TheatersIcon from "@mui/icons-material/Theaters";
 import AutoStoriesIcon from "@mui/icons-material/AutoStories";
@@ -15,11 +14,6 @@ export default function Profile() {
             name: "Email",
             Icon: EmailIcon,
             href: "mailto:itsukikigoshi+ghiobtn@gmail.com",
-        },
-        {
-            name: "Instagram",
-            Icon: InstagramIcon,
-            href: "https://www.instagram.com/itsukikigoshi",
         },
         {
             name: "LinkedIn",
