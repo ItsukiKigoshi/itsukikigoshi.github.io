@@ -72,7 +72,7 @@ export default function Profile() {
         >
             <Avatar
                 alt={`Itsuki Kigoshi Profile Picture`}
-                src={`/profile.jpg`}
+                src={`/profile.webp`}
                 sx={{width: 200, height: 200}}
             />
             <Typography sx={{fontSize: 28}}>Itsuki Kigoshi / 木越 斎</Typography>
