@@ -1,0 +1,14 @@
+---
+import Layout from "../layouts/Layout.astro";
+import {getEntry} from 'astro:content';
+
+const entry = await getEntry('legal', '特定商取引法に基づく表記');
+if (!entry) return Astro.redirect('/404');
+
+const {Content} = await entry.render();
+---
+<Layout title="特定商取引法に基づく表記 - Itsuki Kigoshi">
+    <article class="prose dark:prose-invert prose-sm text-left">
+        <Content/>
+    </article>
+</Layout>
