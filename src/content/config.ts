@@ -7,6 +7,14 @@ const legal = defineCollection({
     }),
 });
 
-export const collections = {
-    'legal': legal,
-};
+const blog = defineCollection({
+    schema: z.object({
+        title: z.string(),
+        created: z.date(),
+        updated: z.date().optional(),
+        tags: z.array(z.string()).default([]),
+        status: z.enum(['public', 'draft']),
+    }),
+});
+
+export const collections = {legal, blog};
