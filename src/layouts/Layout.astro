@@ -1,0 +1,66 @@
+---
+import '../styles/global.css'
+
+const {pathname, host} = Astro.url;
+const currentPath = decodeURIComponent(pathname).replace(/\/$/, "") || "/";
+const isHome = currentPath === "/";
+
+const paths = isHome ? [] : currentPath.split('/').filter(Boolean);
+const breadcrumbs = paths.map((path, index) => {
+    const href = '/' + paths.slice(0, index + 1).join('/');
+    return {
+        label: path,
+        href,
+        isCurrent: href === currentPath
+    };
+});
+
+const {title, description, image} = Astro.props;
+---
+<html lang="ja">
+<head>
+    <meta charset="UTF-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <title>{title}</title>
+    <meta property="og:title" content={title}/>
+    <meta property="og:description" content={description}/>
+    <meta property="og:image" content={image}/>
+    <link rel="icon" href="/favicon.ico"/>
+</head>
+<body class="min-h-dvh flex flex-col items-center w-full justify-between">
+<header class="w-full pt-8 pb-4">
+    {!isHome && (
+            <nav aria-label="Breadcrumb" class="flex justify-center">
+                <ol class="flex items-baseline justify-center gap-3 text-sm opacity-60">
+                    <li><a href="/" class="underline">{host}</a></li>
+                    {breadcrumbs.map((crumb) => (
+                            <li class="flex items-baseline gap-3">
+                                <span class="opacity-40">/</span>
+                                {crumb.isCurrent ? (
+                                        <span class="text-lg font-bold">{crumb.label}</span>
+                                ) : (
+                                        <a href={crumb.href} class="underline">{crumb.label}</a>
+                                )}
+                            </li>
+                    ))}
+                </ol>
+            </nav>
+    )}
+</header>
+<slot/>
+<footer class="w-full pb-6 flex flex-col items-center">
+    {isHome && (
+            <div class="flex items-baseline justify-center gap-3 text-sm opacity-60">
+                <a href="/blog" class="underline">Blog</a>
+
+                <span class="opacity-40">/</span>
+                <a href="/特定商取引法に基づく表記" class="underline">特定商取引法</a>
+                <span class="opacity-40">/</span>
+                <a href="/itsukikigoshi.asc" class="underline">PGP Key</a>
+                <span class="opacity-40">/</span>
+                <a href="https://github.com/ItsukiKigoshi/itsukikigoshi.github.io" class="underline">Source Code</a>
+            </div>
+    )}
+</footer>
+</body>
+</html>

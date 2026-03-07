@@ -1,0 +1,21 @@
+@import "tailwindcss";
+
+@plugin "@tailwindcss/typography";
+
+@theme {
+    --variant-dark: (prefers-color-scheme: dark);
+}
+
+@layer base {
+    body {
+        background-color: white;
+        color: black;
+    }
+
+    @media (prefers-color-scheme: dark) {
+        body {
+            background-color: black;
+            color: white;
+        }
+    }
+}
