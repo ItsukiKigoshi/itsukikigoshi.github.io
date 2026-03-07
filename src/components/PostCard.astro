@@ -1,0 +1,32 @@
+---
+const {post} = Astro.props;
+---
+
+<li class="group">
+    <h2 class="text-2xl font-semibold underline mb-1">
+        <a href={`/blog/${post.slug}/`}>
+            {post.data.title}
+        </a>
+    </h2>
+
+    <time datetime={post.data.created.toISOString()} class="text-sm text-gray-500">
+        {post.data.created.toLocaleDateString('en-GB', {
+            year: 'numeric',
+            month: 'long',
+            day: 'numeric',
+            hour: '2-digit',
+            minute: '2-digit',
+        })}
+    </time>
+
+    <div class="flex gap-2 mt-0">
+        {post.data.tags?.map((tag) => (
+                <a
+                        href={`/blog/${tag}`}
+                        class="text-xs underline opacity-60"
+                >
+                    #{tag}
+                </a>
+        ))}
+    </div>
+</li>

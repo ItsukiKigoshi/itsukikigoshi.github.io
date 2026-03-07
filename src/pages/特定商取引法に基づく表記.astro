@@ -1,5 +1,5 @@
 ---
-import Layout from "../layouts/Layout.astro";
+import BaseLayout from "../layouts/BaseLayout.astro";
 import {getEntry} from 'astro:content';
 
 const entry = await getEntry('legal', '特定商取引法に基づく表記');
@@ -7,8 +7,10 @@ if (!entry) return Astro.redirect('/404');
 
 const {Content} = await entry.render();
 ---
-<Layout title="特定商取引法に基づく表記 - Itsuki Kigoshi">
-    <article class="prose dark:prose-invert prose-sm text-left">
-        <Content/>
-    </article>
-</Layout>
+<BaseLayout title="特定商取引法に基づく表記">
+    <main class="w-full max-w-2xl mx-auto px-4 py-4 flex-1 flex flex-col items-center">
+        <article class="prose dark:prose-invert prose-sm text-left">
+            <Content/>
+        </article>
+    </main>
+</BaseLayout>
