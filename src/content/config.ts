@@ -13,7 +13,7 @@ const blog = defineCollection({
         created: z.date(),
         updated: z.date().optional(),
         tags: z.array(z.string()).default([]),
-        status: z.enum(['public', 'draft']),
+        published: z.boolean().default(false),
     }),
 });
 
