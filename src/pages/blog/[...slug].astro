@@ -2,12 +2,17 @@
 import {getCollection} from 'astro:content';
 import BaseLayout from '../../layouts/BaseLayout.astro';
 
+
 export async function getStaticPaths() {
     const blogEntries = await getCollection('blog', ({data}) => {
         return import.meta.env.DEV || data.published;
     });
 
-    return blogEntries.map(entry => ({
+    const posts = blogEntries.filter(entry =>
+        entry.id.endsWith('.md') || entry.id.endsWith('.mdx')
+    );
+
+    return posts.map(entry => ({
         params: {slug: entry.slug},
         props: {entry},
     }));
