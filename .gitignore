@@ -21,6 +21,6 @@ pnpm-debug.log*
 .DS_Store
 
 # jetbrains setting folder
-.idea/
+.idea/*
 
-/src/content/blog/.obsidian/
+/src/content/blog/.obsidian/*
