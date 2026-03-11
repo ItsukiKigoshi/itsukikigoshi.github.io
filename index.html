@@ -6,9 +6,11 @@
     <title>Itsuki Kigoshi / 木越 斎 (きごし いつき)</title>
     <meta content="Itsuki Kigoshi / 木越 斎 (きごし いつき)" property="og:title"/>
     <meta content="木越 斎（きごし いつき、2004年9月25日-）は, 国際基督教大学で数学/地球科学を専攻する大学生です."
+          name="description">
+    <meta content="木越 斎（きごし いつき、2004年9月25日-）は, 国際基督教大学で数学/地球科学を専攻する大学生です."
           property="og:description"/>
     <link href="/favicon.ico" rel="icon"/>
-    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="/src/style.css" rel="stylesheet">
     <script src="/assets/js/fontawesome.js" type="module"></script>
     <style>
         @media (prefers-color-scheme: dark) {
@@ -23,7 +25,13 @@
 <header></header>
 <main class="flex flex-col items-center justify-center w-full grow px-4">
     <div class="rounded-full overflow-hidden mb-4">
-        <img alt="Itsuki Kigoshi" class="object-cover w-48 h-48" src="assets/profile.jpg"/>
+        <img
+                alt="Itsuki Kigoshi"
+                class="object-cover w-48 h-48"
+                fetchpriority="high"
+                loading="eager"
+                src="/assets/profile.jpg"
+        >
     </div>
 
     <div class="mb-4 text-center">
