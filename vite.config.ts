@@ -10,7 +10,6 @@ export default defineConfig({
         rollupOptions: {
             input: {
                 main: resolve(__dirname, 'index.html'),
-                law: resolve(__dirname, '特定商取引法に基づく表記/index.html'),
             },
         },
     },
