@@ -1,12 +1,11 @@
 import {dom, library} from '@fortawesome/fontawesome-svg-core';
-import {faArrowLeft, faEnvelope} from '@fortawesome/free-solid-svg-icons';
-import {faGitlab} from '@fortawesome/free-brands-svg-icons';
+import {faEnvelope} from '@fortawesome/free-solid-svg-icons';
+import {faGithub} from '@fortawesome/free-brands-svg-icons';
 
 
 library.add(
-    faArrowLeft,
     faEnvelope,
-    faGitlab,
+    faGithub,
 );
 
 dom.watch();
